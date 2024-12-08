@@ -1,0 +1,104 @@
+/* Main container for the chat window */
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Messages section styling */
+.messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Message styles */
+.message {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 15px; /* Smooth, rounded corners */
+  max-width: 70%; /* Restrict width to avoid stretching */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-size: 14px; /* Standard readable font size */
+  word-wrap: break-word; /* Ensure long words wrap properly */
+}
+
+/* Vendor messages (sent by the vendor) */
+.vendor-message {
+  background-color: #9de6f0;
+  margin-left: auto;
+  text-align: right;
+  color: #333;
+}
+
+/* Customer messages (sent by the customer) */
+.customer-message {
+  background-color: #b9f5be;
+  margin-right: auto;
+  color: #333;
+  text-align: left;
+}
+
+.message:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+
+/* "No Chat Selected" message styling */
+.no-chat-selected {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #999;
+  background-color: #fafafa;
+}
+
+/* Input and send button container */
+.send-message {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+}
+
+/* Input field styling */
+.send-message input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.send-message input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Send button styling */
+.send-message button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.send-message button:hover {
+  background-color: #0056b3;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}

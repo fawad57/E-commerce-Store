@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1c1c1c;
+  padding-top: 80px;
+  color: #fff;
+}
+
+.products-container {
+  padding: 0;
+  background: #ffffff8f;
+}
+
+.featured-products {
+  position: relative;
+  height: 700px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.featured-product {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: opacity 2s ease; /* For fade effect */
+  animation: slideLeft 2s forwards;
+}
+
+.featured-info {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  width: 800px; /* Adjusted width to fit within the layout */
+  text-align: justify;
+}
+
+.featured-info h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.featured-info p {
+  font-size: 18px;
+  margin: 5px 0;
+  word-wrap: break-word;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 20px 0;
+  max-width: 2000px;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #2c2c2c;
+}
+
+.product-card {
+  background: #333;
+  border-radius: 10px; /* Smooth rounded corners */
+  overflow: hidden;
+  width: 100%; /* Full width of the grid column */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.product-card-image-container {
+  position: relative;
+  height: 250px; /* Fixed height for images */
+}
+
+.product-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.product-card-info {
+  padding: 20px;
+  text-align: left; /* Align content to the left */
+}
+
+.product-card-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #fff; /* White text color */
+}
+
+.product-card-info p {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #bbb; /* Subtle text color */
+}
+
+/* View Details Button */
+.product-card-info .view-details-button {
+  display: inline-block;
+  margin-top: 10px;
+  background: rgba(255, 0, 0, 0.644); /* Button color red */
+  color: white;
+  border: none;
+  padding: 5px 10px; /* Smaller size */
+  font-size: 14px; /* Adjust font size */
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.product-card-info .view-details-button:hover {
+  background-color: darkred; /* Slightly darker red on hover */
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.delete-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+  border: none;
+  border-radius: 50%; /* Make it circular */
+  color: white;
+  width: 30px; /* Small circular size */
+  height: 30px; /* Match width for a perfect circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.delete-button:hover {
+  background: darkred;
+}
+
+.product-card:hover .delete-button {
+  opacity: 1;
+}
+
+/* Edit Button at Bottom-Left */
+.edit-button {
+  position: absolute;
+  bottom: 0; /* Position it at the bottom */
+  left: 0; /* Align to the left */
+  background: blue;
+  border: none;
+  border-radius: 50%; /* Make it circular */
+  color: white;
+  width: 30px; /* Small circular size */
+  height: 30px; /* Match width for a perfect circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card-image-container:hover .delete-button,
+.product-card-image-container:hover .edit-button {
+  opacity: 1;
+}
+
+.delete-button {
+  right: 10px;
+}
+
+.edit-button {
+  left: 10px;
+}

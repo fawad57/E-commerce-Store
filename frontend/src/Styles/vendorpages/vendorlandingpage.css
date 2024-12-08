@@ -1,0 +1,42 @@
+/* Landing Page Styles - landingpage.css */
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.hero {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../assets/back.webp");
+  position: relative;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-size: 20px;
+  max-width: 600px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,142 @@
+/* General Footer Styles */
+.footer {
+  background-color: #636060;
+  color: white;
+  padding: 50px 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-about,
+.footer-links,
+.footer-company,
+.footer-contact {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer h3,
+.footer h4 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #ffde59;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  font-size: 20px;
+  color: white;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #ffde59;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Increase spacing between sections */
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-company,
+  .footer-contact {
+    text-align: center;
+  }
+
+  .footer-about img {
+    max-width: 150px; /* Scale logo for smaller screens */
+    margin-bottom: 15px;
+  }
+
+  .footer ul {
+    padding: 0;
+    margin: 0 auto; /* Center-align lists */
+  }
+
+  .footer ul li {
+    font-size: 16px;
+  }
+
+  .footer h3,
+  .footer h4 {
+    font-size: 16px; /* Adjust heading sizes */
+  }
+
+  .footer-bottom {
+    font-size: 12px; /* Adjust copyright text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-about img {
+    max-width: 120px; /* Further scale logo for very small screens */
+  }
+
+  .footer h3,
+  .footer h4 {
+    font-size: 14px;
+  }
+
+  .footer ul li {
+    font-size: 14px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    line-height: 1.5; /* Improve readability */
+  }
+}
